@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Challenge Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Challenge Hub</h1>
+        <nav>
+            <a href="#profile">Profile</a>
+            <a href="#challenges">Challenges</a>
+            <a href="#leaderboard">Leaderboard</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="profile">
+            <h2>Welcome, [User Name]</h2>
+            <p>Your Current Challenges:</p>
+            <div id="userChallenges" class="challenge-list"></div>
+        </section>
+
+        <section id="challenges">
+            <h2>Create a New Challenge</h2>
+            <form id="challengeForm">
+                <label for="challengeTitle">Title:</label>
+                <input type="text" id="challengeTitle" required>
+
+                <label for="challengeType">Type:</label>
+                <select id="challengeType" required>
+                    <option value="self">Self-Originated</option>
+                    <option value="employer">Employer-Driven</option>
+                    <option value="social">Social Event</option>
+                </select>
+
+                <label for="challengeGoal">Goal Description:</label>
+                <textarea id="challengeGoal" required></textarea>
+
+                <button type="submit">Create Challenge</button>
+            </form>
+        </section>
+
+        <section id="leaderboard">
+            <h2>Leaderboard</h2>
+            <ul id="leaderboardList" class="leaderboard-list"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Performance Challenge Hub &copy; 2024</p>
+    </footer>
+    <script src="config.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
